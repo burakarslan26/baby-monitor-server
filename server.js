@@ -23,7 +23,7 @@ const server = http.createServer((req, res) => {
     res.end(JSON.stringify({ 
         status: 'running',
         message: 'Bebek Telsizi Sunucusu Çalışıyor',
-        rooms: Object.keys(rooms).length
+        rooms: rooms.size
     }));
 });
 
@@ -314,4 +314,3 @@ process.on('SIGTERM', () => {
         });
     });
 });
-
